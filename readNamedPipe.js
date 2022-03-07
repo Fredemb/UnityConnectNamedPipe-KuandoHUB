@@ -15,7 +15,12 @@ function parseXmlToJson(xml) { //function to parse xml to js obj stolen from htt
 
 async function getRelevantPipe(directory, nameStart) {
     let allPipeNames = await fs.promises.readdir(directory)
-    return allPipeNames.find(pipe => pipe.startsWith(nameStart))
+    let relevantPipe = allPipeNames.find(pipe => pipe.startsWith(nameStart))
+    if (!relevantPipe) {
+        alert("It seems Unity Client is not currently running on your PC")
+        throw new Error('The script requires Unity Client to be running on the PC')
+    }
+    return relevantPipe
 }
 
 async function listenOnPipe(pipeDirectory) {
