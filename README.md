@@ -17,5 +17,3 @@ KUANDO HUB SETTINGS:
 
 KNOWN ISSUES:
  - Light color will not be set by script untill first event is detected after script starts (No initial value)
- - Light will change to green whenever a call is ended, even if another call is in progress
- - Light will change to yellow whenever an incoming call is alerting, even if another call is in progress
