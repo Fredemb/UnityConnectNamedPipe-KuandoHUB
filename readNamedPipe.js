@@ -93,7 +93,7 @@ async function listenOnPipe(pipeDirectory) {
                     }
                     break;
                 case 'Alerting':
-                    if (lastStatus == status){ //Do not accept multiple alerting statuses
+                    if (lastStatus != status){ //Do not accept multiple alerting statuses
                         activeCallCount += 1
                         if (activeCallCount > 2) {
                             console.error('ERROR: More than 2 active calls registered')
