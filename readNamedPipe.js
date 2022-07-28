@@ -54,7 +54,7 @@ function alternatingColors(color1, color2) {
         } else {
             setColor(color1)
         }
-    }, 1000)
+    }, 500)
 }
 
 async function listenOnPipe(pipeDirectory) {
